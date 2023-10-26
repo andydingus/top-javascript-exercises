@@ -1,11 +1,16 @@
 const repeatString = function(string, num) {
     // Solution using a for loop
     let newString = '';
-    for (i = 0; i < num; i++) {
-        newString += string;
+    if (num < 0) {
+        return 'ERROR';
+    } else {
+        for (i = 0; i < num; i++) {
+            newString += string;
+        }
+        return newString;
     }
-    return newString;
-    // Easy solution
+    
+    // Easy solution for else statement
     // return string.repeat(num);
 };
 
