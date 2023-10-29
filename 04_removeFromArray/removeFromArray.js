@@ -1,10 +1,12 @@
-const removeFromArray = function(arr, element) {
-    let elementIndex = arr.indexOf(element);
+const removeFromArray = function(arr, ...elements) {
     let newArray = arr;
-    if (elementIndex != -1) {
-        arr.splice(elementIndex, 1);
+    for (const element of elements) {
+        let elementIndex = arr.indexOf(element);
+        if (elementIndex != -1) {
+            arr.splice(elementIndex, 1);
+        }
     }
-
+    
     return newArray;
 };
 
